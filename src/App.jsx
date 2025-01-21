@@ -1,10 +1,11 @@
 import React from "react"
+import Header from "../components/Header"
 
 function App() {
 
   return (
     <div className="site-wrapper">
-      <h1>test</h1>
+      <Header />
     </div>
   )
 }

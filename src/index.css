@@ -6,8 +6,30 @@ body {
   margin: 0;
   background: linear-gradient(#171515 42%, #C0B4B4 100%) no-repeat;
   border: 1px solid red;
+  font-family: 'Poppins', sans-serif;
 }
 
 .site-wrapper {
   height: 100vh;
+}
+
+header {
+  border: 1px solid blue;
+  background-color: #424141;
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .header-title {
+  color: #FF9233;
+}
+
+header .switch-language-button {
+  font-family: 'Poppins', sans-serif;
+  margin: auto 0;
+  border-radius: 10px;
+  padding: 0.5em;
 }
