@@ -8,12 +8,12 @@
 
 body {
   margin: 0;
-  background: linear-gradient(#343232 42%, #C0B4B4 100%) no-repeat;
+  background: linear-gradient(#343232 52%, #C0B4B4 100%) no-repeat;
   font-family: 'Poppins', sans-serif;
 }
 
-/* Typography */
 
+/* Typography */
 header .header-title {
   font-size: 1.10rem;
   color: var(--headers-color);
@@ -34,6 +34,10 @@ header .header-title {
 
 .card-container .email {
   margin: 0;
+}
+
+.card-container .email {
+  color: #ffffff;
 }
 
 
@@ -95,3 +99,36 @@ main {
   border-radius: 10px;
   filter: drop-shadow(0 0 0.3rem #ffffff);
 }
+
+.social-media-container {
+  display: flex;
+  gap: 1.5em;
+  margin-top: 0.938em;
+}
+
+.linkedin-icon,
+.github-icon {
+  width: 35px;
+  height: 35px;
+  color: #ffffff;
+  transition: .4s;
+}
+
+.linkedin-icon {
+  background-color: #0077B5;
+  padding: 0.25em;
+  border-radius: 5px;
+}
+
+.linkedin-icon:hover {
+  width: 60px;
+  height: 60px;
+  transition: .4s;
+}
+
+.github-icon:hover {
+  width: 60px;
+  height: 60px;
+  transition: .4s;
+}
+
