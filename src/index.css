@@ -6,9 +6,11 @@
   --headers-color: #FF9233;
 }
 
+html,
 body {
   margin: 0;
-  background: linear-gradient(#343232 52%, #C0B4B4 100%) no-repeat;
+  padding: 0;
+  background: linear-gradient(#343232 52%, #7c7474 100%) no-repeat;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -22,7 +24,7 @@ header .header-title {
 .name {
   font-size: 1.25rem;
   color: var(--headers-color);
-  margin: 0.5em 0 0 0;
+  margin: 0;
 }
 
 .card-container .contacts {
@@ -34,16 +36,22 @@ header .header-title {
 
 .card-container .email {
   margin: 0;
-}
-
-.card-container .email {
   color: #ffffff;
 }
 
+.description-section-header {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.description-text {
+  font-size: 0.875rem;
+  color: #ffffff;
+}
 
 /* Layout */
 .site-wrapper {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 header {
@@ -59,14 +67,20 @@ header .switch-language-button {
   font-family: 'Poppins', sans-serif;
   margin: auto 0;
   border-radius: 10px;
-  padding: 0.5em;
+  padding: 0.5em 1em;
   cursor: pointer;
   color: var(--headers-color);
   border: 1px solid var(--headers-color);
   background: none;
+  transition: .5s;
 }
 
-main {
+.switch-language-button:hover {
+  background-color: var(--headers-color);
+  color: #171515;
+}
+
+.main-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,10 +114,16 @@ main {
   filter: drop-shadow(0 0 0.3rem #ffffff);
 }
 
+.contacts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .social-media-container {
   display: flex;
   gap: 1.5em;
-  margin-top: 0.938em;
+  margin: 0.938em 0;
 }
 
 .linkedin-icon,
@@ -111,7 +131,7 @@ main {
   width: 35px;
   height: 35px;
   color: #ffffff;
-  transition: .4s;
+  transition: .5s;
 }
 
 .linkedin-icon {
@@ -120,15 +140,96 @@ main {
   border-radius: 5px;
 }
 
-.linkedin-icon:hover {
-  width: 60px;
-  height: 60px;
-  transition: .4s;
-}
-
+.linkedin-icon:hover,
 .github-icon:hover {
-  width: 60px;
-  height: 60px;
-  transition: .4s;
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 0.4rem #ffffff)
 }
 
+.description-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em 0;
+}
+
+.description-section-header {
+  color: var(--headers-color);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.description-container {
+  border: 1px solid #b4b1b1;
+  background: none;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.description-text {
+  padding: 1em;
+  line-height: 2;
+}
+
+.scrimba-link {
+  text-align: center;
+  color: #FF9233;
+  transition: .3s;
+}
+
+.scrimba-link:hover {
+  text-shadow: 1px 1px 5px #FF9233;
+  transform: scale(1.07);
+}
+
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-section-header {
+  font-size: 1.25rem;
+  margin: 0 0 0.25em;
+  color: var(--headers-color);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-areas:
+        "Html Html . Css Css"
+        ". JavaScript JavaScript JavaScript ."
+        "React React React Figma Figma";
+  grid-gap: 8px;
+}
+
+.Html {
+  grid-area: Html;
+}
+
+.Css {
+  grid-area: Css;
+}
+
+.JavaScript {
+  grid-area: JavaScript;
+}
+
+.React {
+  grid-area: React;
+}
+
+.Figma {
+  grid-area: Figma;
+}
+
+.skills {
+  border: 2px solid #7bd5ff;
+  border-radius: 10px;
+  color: #7bd5ff;
+  text-align: center;
+  margin: 0;
+  padding: 0.125em 0.7em;
+}
