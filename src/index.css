@@ -172,9 +172,14 @@ header .switch-language-button {
 }
 
 .scrimba-link {
+  border: 1px solid red;
   text-align: center;
   color: #FF9233;
   transition: .3s;
+}
+
+.scrimba-link-text {
+  margin: 0;
 }
 
 .scrimba-link:hover {

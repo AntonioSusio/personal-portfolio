@@ -40,7 +40,7 @@ export default function About() {
                         <p className="description-text">{data.description}</p>
                     </div>
                     <a className="scrimba-link" href="https://scrimba.com" target="_blank">
-                        <p>Click here if you want discover more about Scrimba</p>
+                        <p className="scrimba-link-text">Click here if you want discover more about Scrimba</p>
                     </a>
                 </section>
 
