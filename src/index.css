@@ -188,7 +188,6 @@ header .switch-language-button {
 }
 
 .skills-section {
-  border: 1px solid green;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -267,6 +266,10 @@ header .switch-language-button {
   display: none;
 }
 
+.slide-visible {
+  display: block;
+}
+
 .certificate-img-container img{
   object-fit: cover;
   width: 100%;
@@ -280,7 +283,13 @@ header .switch-language-button {
 }
 
 .carousel-btn {
-  font-size: 2rem;
+  font-size: 1.25rem;
   background-color: #ffffff;
   border-radius: 50%;
+  transition: .3s;
+}
+
+.carousel-btn:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 0.3rem #ffffff);
 }

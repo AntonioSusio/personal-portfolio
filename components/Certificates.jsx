@@ -1,21 +1,53 @@
-import React from "react"
-import certificatesData from "../certificatesData"
-import { GrFormPrevious, GrFormNext } from "react-icons/gr";
+import React from "react";
+import certificatesData from "../certificatesData";
+import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 
 export default function Certificates() {
-    const [certificates, setCertificates] = React.useState(certificatesData)
+    const [certificates, setCertificates] = React.useState([])
+    const [currentSlideIndex, setCurrentSlideIndex] = React.useState(0)
 
-    console.log(certificates)
+    React.useEffect(() => {
+        function getCertificates() {
+            setCertificates(certificatesData);
+        }
+        getCertificates();
+        console.log(certificates)
+    }, [])
 
-    const certificatesEl = certificates.map(certificate => (
-        <div 
-            key={certificate.id}
-            className={`${certificate.id === 1 ? "slide-visible" : "slide-hidden"} certificate-img-container`}>
-            <img 
-                src={`./src/assets/images/${certificate.image}`} 
-                alt={certificate.description} 
-            />
-        </div>
+    function moveSlide(currentIndex, event) {
+        console.log(event.target)
+        switch (event.target.id) {
+            case "next-slide-button":
+                if(currentIndex === certificates.length - 1) {
+                    setCurrentSlideIndex(0)
+                }
+                else {
+                    setCurrentSlideIndex(prevSlideIndex => prevSlideIndex + 1)
+                }
+                break;
+
+            case "previous-slide-button":
+                if(currentIndex === 0) {
+                    setCurrentSlideIndex(certificates.length - 1)
+                }
+                else {
+                    setCurrentSlideIndex(prevSlideIndex => prevSlideIndex - 1)
+                }
+            default:
+                break;
+        }
+        
+    }
+
+    const certificatesEl = certificates.map((certificate, index) => (
+            <div 
+                key={index}
+                className={`${index === currentSlideIndex ? "slide-visible" : "slide-hidden"} certificate-img-container`}>
+                <img 
+                    src={`./src/assets/images/${certificate.image}`} 
+                    alt={certificate.description} 
+                />
+            </div>
     ))
 
     return (
@@ -25,8 +57,8 @@ export default function Certificates() {
                 {certificatesEl}
             </div>
             <div className="carousel-buttons-container">
-                <GrFormPrevious className="carousel-btn" />
-                <GrFormNext className="carousel-btn"/>
+                <MdNavigateBefore className="carousel-btn" id="previous-slide-button" onClick={() => moveSlide(currentSlideIndex, event)} />
+                <MdNavigateNext className="carousel-btn" id="next-slide-button" onClick={() => moveSlide(currentSlideIndex, event)} />
             </div>
         </section>
     )
