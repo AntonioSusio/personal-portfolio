@@ -16,7 +16,6 @@ export default function Carousel() {
     }, [])
 
     function moveSlide(currentIndex, event) {
-        console.log(event.target)
         switch (event.target.id) {
             case "next-slide-button":
                 if(currentIndex === certificates.length - 1) {
@@ -49,44 +48,44 @@ export default function Carousel() {
     }
 
     const certificatesEl = certificates.map((certificate, index) => (
-                <div 
-                    key={index}
-                    className={`${index === currentSlideIndex ? "slide-visible" : "slide-hidden"} certificate-img-container`}>
-                    <img 
-                        src={`./src/assets/images/${certificate.image}`} 
-                        alt={certificate.description}
-                        onClick={() => openOverlay(`./src/assets/images/${certificate.image}`)}
-                    />
-                </div>
+        <div 
+            key={index}
+            className={`${index === currentSlideIndex ? "slide-visible" : "slide-hidden"} certificate-img-container`}>
+            <img 
+                src={`./src/assets/images/${certificate.image}`} 
+                alt={certificate.alternativeText}
+                onClick={() => openOverlay(`./src/assets/images/${certificate.image}`)}
+            />
+        </div>
     ))
 
     return(
         <>
             <div className="carousel">
-                    {certificatesEl}
-                </div>
-                <div className="carousel-buttons-container">
-                    <button 
-                        id="previous-slide-button" 
-                        className="carousel-btn"
-                        onClick={() => moveSlide(currentSlideIndex, event)}>
-                        &lt;
-                    </button>
-                    <button 
-                        id="next-slide-button"
-                        className="carousel-btn"
-                        onClick={() => moveSlide(currentSlideIndex, event)}
-                    >
-                        &gt;
-                    </button>
-                </div>
+                {certificatesEl}
+            </div>
+            <div className="carousel-buttons-container">
+                <button 
+                    id="previous-slide-button" 
+                    className="carousel-btn"
+                    onClick={(event) => moveSlide(currentSlideIndex, event)}>
+                    &lt;
+                </button>
+                <button 
+                    id="next-slide-button"
+                    className="carousel-btn"
+                    onClick={(event) => moveSlide(currentSlideIndex, event)}
+                >
+                    &gt;
+                </button>
+            </div>
 
-                {/* Zoomed image overlay */}
-                {isZoomed && (
-                    <div className="overlay" onClick={closeOverlay}>
-                        <img src={imgSrc} alt="Carousel image zoomed" className="img-zoom" />
-                    </div>
-                )}
+            {/* Zoomed image overlay */}
+            {isZoomed && (
+                <div className="overlay" onClick={closeOverlay}>
+                    <img src={imgSrc} alt="Carousel image zoomed" className="img-zoom" />
+                </div>
+            )}
         </>
     )
 }

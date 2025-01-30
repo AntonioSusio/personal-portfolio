@@ -24,7 +24,7 @@ header .header-title {
 .name {
   font-size: 1.25rem;
   color: var(--headers-color);
-  margin: 0;
+  margin: 0.875em 0 0 0;
 }
 
 .card-container .contacts {
@@ -86,6 +86,7 @@ header .switch-language-button {
   align-items: center;
   justify-content: center;
   padding: 2em;
+  gap: 4em;
 }
 
 .about-section {
@@ -150,7 +151,6 @@ header .switch-language-button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2em 0;
 }
 
 .description-section-header {
@@ -190,6 +190,7 @@ header .switch-language-button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 2em;
 }
 
 .skills-section-header {
@@ -238,15 +239,16 @@ header .switch-language-button {
   padding: 0.125em 0.7em;
 }
 
-.certificates-section {
-  margin: 2.5em 0;
+.certificates-section,
+.projects-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.certificates-section-header {
+.certificates-section-header,
+.projects-section-header {
   font-size: 1.25rem;
   margin: 0 0 0.25em;
   color: var(--headers-color);
@@ -254,37 +256,40 @@ header .switch-language-button {
   text-decoration: underline;
 }
 
-.carousel {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
 
-.certificate-img-container {
+.certificate-img-container,
+.project-img-container {
   width: 250px;
   height: 127px;
 }
 
-.certificate-img-container img {
+.certificate-img-container img,
+.project-img-container img {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  transition: .3s;
 }
 
-.certificate-img-container img:hover {
+.certificate-img-container img:hover,
+.project-img-container img:hover {
   filter: drop-shadow(1px 1px 5px #ffffff);
   transform: scale(1.07);
 }
 
-.slide-hidden {
-  display: none;
+.project-card {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .slide-visible {
   display: block;
+}
+
+.slide-hidden {
+  display: none;
 }
 
 .overlay {
@@ -296,7 +301,7 @@ header .switch-language-button {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Sfondo scuro trasparente */
+  background-color: rgba(0, 0, 0, 0.8); /* Dark trasparent background */
   z-index: 1000;
 }
 
