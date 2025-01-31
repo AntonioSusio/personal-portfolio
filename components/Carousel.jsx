@@ -1,24 +1,24 @@
 import React from "react";
 
-export default function Carousel() {
+export default function Carousel({data, slideIndex, setSlideIndex}){
 
-    function moveSlide(currentIndex, event) {
+    function moveSlide(slideIndex, event) {
         switch (event.target.id) {
             case "next-slide-button":
-                if(currentIndex === certificates.length - 1) {
-                    setCurrentSlideIndex(0)
+                if(slideIndex === data.length - 1) {
+                    setSlideIndex(0)
                 }
                 else {
-                    setCurrentSlideIndex(prevSlideIndex => prevSlideIndex + 1)
+                    setSlideIndex(prevSlideIndex => prevSlideIndex + 1)
                 }
                 break;
 
             case "previous-slide-button":
-                if(currentIndex === 0) {
-                    setCurrentSlideIndex(certificates.length - 1)
+                if(slideIndex === 0) {
+                    setSlideIndex(data.length - 1)
                 }
                 else {
-                    setCurrentSlideIndex(prevSlideIndex => prevSlideIndex - 1)
+                    setSlideIndex(prevSlideIndex => prevSlideIndex - 1)
                 }
             default:
                 break;
@@ -28,19 +28,19 @@ export default function Carousel() {
     return (
         <>
             <div className="carousel">
-                {dataEl}
+                {data}
             </div>
             <div className="carousel-buttons-container">
                 <button 
                     id="previous-slide-button" 
                     className="carousel-btn"
-                    onClick={(event) => moveSlide(currentSlideIndex, event)}>
+                    onClick={(event) => moveSlide(slideIndex, event)}>
                     &lt;
                 </button>
                 <button 
                     id="next-slide-button"
                     className="carousel-btn"
-                    onClick={(event) => moveSlide(currentSlideIndex, event)}
+                    onClick={(event) => moveSlide(slideIndex, event)}
                 >
                     &gt;
                 </button>
@@ -48,3 +48,6 @@ export default function Carousel() {
         </>
     )
 }
+
+
+
