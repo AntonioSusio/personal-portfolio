@@ -1,3 +1,15 @@
+// interface carouselData
+// [
+// id=Number,
+// image=String,
+// alternativeText=stringify,
+// description?:String,
+// redirect=Boolean,
+// type:string
+// ]
+
+
+// return
 export default [
     {
         id: 1,

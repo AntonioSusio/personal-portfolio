@@ -1,22 +1,11 @@
 import React from "react";
-import projectsData from "../projectsData";
 
-export default function ProjectsCarousel() {
-    const [projects, setprojects] = React.useState([]);
-    const [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
-
-    React.useEffect(() => {
-        function getProjects() {
-            setprojects(projectsData);
-        }
-        getProjects();
-        console.log(projects)
-    }, [])
+export default function Carousel() {
 
     function moveSlide(currentIndex, event) {
         switch (event.target.id) {
             case "next-slide-button":
-                if(currentIndex === projects.length - 1) {
+                if(currentIndex === certificates.length - 1) {
                     setCurrentSlideIndex(0)
                 }
                 else {
@@ -26,7 +15,7 @@ export default function ProjectsCarousel() {
 
             case "previous-slide-button":
                 if(currentIndex === 0) {
-                    setCurrentSlideIndex(projects.length - 1)
+                    setCurrentSlideIndex(certificates.length - 1)
                 }
                 else {
                     setCurrentSlideIndex(prevSlideIndex => prevSlideIndex - 1)
@@ -36,27 +25,10 @@ export default function ProjectsCarousel() {
         }
     }
 
-    const projectsEl = projects.map((project, index) => (
-        <div 
-            key={index}
-            className={`${index === currentSlideIndex ? "slide-visible" : "slide-hidden"} project-card`}>
-            <div className="project-img-container">
-                <img 
-                    src={`./src/assets/images/${project.image}`} 
-                    alt={project.alternativeText}onClick={() => openOverlay(`./src/assets/images/${project.image}`)}
-                />
-            </div>
-
-            <div className={`${index === currentSlideIndex ? "slide-visible" : "slide-hidden"} project-description-container`}>
-                <p>{project.description}</p>
-            </div>
-        </div>
-    ))
-
-    return(
+    return (
         <>
             <div className="carousel">
-                {projectsEl}
+                {dataEl}
             </div>
             <div className="carousel-buttons-container">
                 <button 
