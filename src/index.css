@@ -254,29 +254,37 @@ header .switch-language-button {
   text-decoration: underline;
 }
 
-.carousel {
-  border: 1px solid red;
+.carousel-container {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
-.certificate-img-container {
+.carousel {
+  display: flex;
+  flex-direction: row;
   width: 250px;
   height: 127px;
+  overflow: hidden;
+  transition: .3s ease-in-out;
+  cursor: pointer;
 }
 
-.certificate-img-container img {
+.carousel:hover {
+  filter: drop-shadow(1px 1px 5px #ffffff);
+  transform: scale(1.07);
+}
+
+.carousel img {
   object-fit: cover;
   width: 100%;
   height: 100%;
-}
-
-.slide-visible {
   display: block;
-}
-
-.slide-hidden {
-  display: none;
+  flex-shrink: 0;
+  flex-grow: 0;
+  transition: translate 300ms ease-in-out;
 }
 
 .overlay {
@@ -299,30 +307,15 @@ header .switch-language-button {
   cursor: zoom-out;
 }
 
-
-
-/* 
-.certificate-img-container img:hover {
-  filter: drop-shadow(1px 1px 5px #ffffff);
-  transform: scale(1.07);
-}
-
-.carousel-buttons-container {
-  display: flex;
-  margin-top: 1em;
-  gap: 50px;
-}
-
 .carousel-btn {
-  background-color: #ffffff;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  border: none;
-  cursor: pointer;
-  transition: .3s;
+  all: unset;
+  display: block;
+  font-size: 1.5rem;
+  color: #ffffff;
+  transition: .3s ease-in-out;
 }
 
 .carousel-btn:hover {
   filter: drop-shadow(1px 1px 5px #ffffff);
+  transform: scale(1.5);
 }

@@ -26,26 +26,26 @@ export default function Carousel({data, slideIndex, setSlideIndex}){
     }
 
     return (
-        <>
+        <div className="carousel-container">
+            <button 
+                id="previous-slide-button" 
+                className="carousel-btn"
+                onClick={(event) => moveSlide(slideIndex, event)}>
+                &lt;
+            </button>
+            
             <div className="carousel">
                 {data}
             </div>
-            <div className="carousel-buttons-container">
-                <button 
-                    id="previous-slide-button" 
-                    className="carousel-btn"
-                    onClick={(event) => moveSlide(slideIndex, event)}>
-                    &lt;
-                </button>
-                <button 
-                    id="next-slide-button"
-                    className="carousel-btn"
-                    onClick={(event) => moveSlide(slideIndex, event)}
-                >
-                    &gt;
-                </button>
-            </div>
-        </>
+
+            <button 
+                id="next-slide-button"
+                className="carousel-btn"
+                onClick={(event) => moveSlide(slideIndex, event)}
+            >
+                &gt;
+            </button>
+        </div>
     )
 }
 

@@ -24,16 +24,15 @@ export default function Certificates() {
         setIsZoomed(false)
     }
 
-    const certificateEl = certificates.map((certificate, index) => (
-        <div 
+    const certificateEl = certificates.map(certificate => (
+        <img 
             key={certificate.id}
-            className={`${index === slideIndex ? "slide-visible" : "slide-hidden"} certificate-img-container`}
-        >
-            <img 
-                src={certificate.imageUrl} 
-                alt={certificate.alternativeText} 
-                onClick={() => openOverlay(`${certificate.imageUrl}`)}/>
-        </div>
+            className="image-slider"
+            src={certificate.imageUrl} 
+            alt={certificate.alternativeText}
+            style={{ translate: `${-100 * slideIndex}%`}}
+            onClick={() => openOverlay(`${certificate.imageUrl}`)}
+        />
     ))
     
     return (
