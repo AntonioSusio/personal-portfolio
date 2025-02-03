@@ -8,6 +8,7 @@ export default function Main() {
         <main className="main-content">
             <About />
             <Certificates />
+            <Projects />
         </main>
     )
 }

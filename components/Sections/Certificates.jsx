@@ -27,8 +27,8 @@ export default function Certificates() {
     const certificateEl = certificates.map(certificate => (
         <img 
             key={certificate.id}
-            className="image-slider"
             src={certificate.imageUrl} 
+            className="certificate-img"
             alt={certificate.alternativeText}
             style={{ translate: `${-100 * slideIndex}%`}}
             onClick={() => openOverlay(`${certificate.imageUrl}`)}
@@ -36,22 +36,20 @@ export default function Certificates() {
     ))
     
     return (
-        <>
         <section className="certificates-section">
-        <h2 className="certificates-section-header">Certificates</h2>
-        <Carousel 
-            data={certificateEl}
-            slideIndex={slideIndex}
-            setSlideIndex={setSlideIndex}
-        />
-        </section>
-        
-        {/* Zoomed image overlay */}
+            <h2 className="certificates-section-header">Certificates</h2>
+            <Carousel 
+                data={certificateEl}
+                slideIndex={slideIndex}
+                setSlideIndex={setSlideIndex}
+            />
+            
+            {/* Zoomed image overlay */}
             {isZoomed && (
                 <div className="overlay" onClick={closeOverlay}>
                     <img src={imgSrc} alt="Carousel image zoomed" className="img-zoom" />
                 </div>
             )}
-        </>
+        </section>
     )
 }
