@@ -29,8 +29,7 @@ export default function Projects() {
             key={project.id}
             className="project-card"
             style={{ translate: `${-100 * slideIndex}%`}}
-            onClick={() => openOverlay(`${project.imagePath}`)}
-        >
+            onClick={() => openOverlay(`${project.imagePath}`)}>
             <div className="project-img-container">
                 <img className="project-img" src={project.imagePath} alt={project.alternativeText} />
             </div>

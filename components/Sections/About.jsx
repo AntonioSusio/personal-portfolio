@@ -34,7 +34,7 @@ export default function About() {
                     </div>
                 </div>
 
-                <section className="description-section">
+                <section className="description-and-skill-section">
                     <p className="description-section-header">About me</p>
                     <div className="description-container">
                         <p className="description-text">{data.description}</p>
@@ -42,15 +42,15 @@ export default function About() {
                     <a className="scrimba-link" href="https://scrimba.com" target="_blank">
                         <p className="scrimba-link-text">Click here if you want discover more about Scrimba</p>
                     </a>
-                </section>
 
-                <section className="skills-section">
-                    <h2 className="skills-section-header">Skills</h2>
-                    <div className="skills-container">
-                        {data.skills.map(skill => (
-                            <p className={`${skill} skills`} key={skill}>{skill}</p>
-                        ))}
-                    </div>
+                    <section className="skills-section">
+                        <h2 className="skills-section-header">Skills</h2>
+                        <div className="skills-container">
+                            {data.skills.map(skill => (
+                                <p className={`${skill} skills`} key={skill}>{skill}</p>
+                            ))}
+                        </div>
+                    </section>
                 </section>
         </section>
     )
