@@ -25,18 +25,26 @@ export default function Projects() {
     }
 
     const projectsEl = projects.map(project => (
-        <div 
-            key={project.id}
-            className="project-card"
-            style={{ translate: `${-100 * slideIndex}%`}}
-            onClick={() => openOverlay(`${project.imagePath}`)}>
-            <div className="project-img-container">
-                <img className="project-img" src={project.imagePath} alt={project.alternativeText} />
+        
+            <div 
+                key={project.id}
+                className="project-card"
+                style={{ translate: `${-100 * slideIndex}%`}}
+            >
+                <div className="project-img-container">
+                    <img 
+                        className="project-img" 
+                        src={project.imagePath} 
+                        alt={project.alternativeText} 
+                        onClick={() => openOverlay(`${project.imagePath}`)}
+                    />
+                </div>
+                <div className="project-description">
+                    <p>{project.description}</p>
+                </div>
+                <a href={project.url} target="_blank">click here to visit the project page</a>
             </div>
-            <div className="project-description">
-                <p>{project.description}</p>
-            </div>
-        </div>
+       
     ))
 
     return (
