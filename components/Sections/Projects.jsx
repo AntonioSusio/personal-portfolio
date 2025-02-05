@@ -41,10 +41,10 @@ export default function Projects() {
                 </div>
                 <div className="project-description">
                     <p className="project-description-text">{project.description}</p>
-                    <a className="project-link" href={project.url} target="_blank">
-                        <p className="project-link-text">Click here to visit project page</p>
-                    </a>
                 </div>
+                <a className="project-link" href={project.url} target="_blank">
+                    <p className="project-link-text">Click here to visit project page</p>
+                </a>
             </div>
        
     ))

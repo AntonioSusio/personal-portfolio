@@ -294,7 +294,7 @@ header .switch-language-button {
   gap: 15px;
 }
 
-.carousel {
+.certificates-section .carousel {
   display: flex;
   flex-direction: row;
   width: 250px;
@@ -317,6 +317,7 @@ header .switch-language-button {
   flex-shrink: 0;
   flex-grow: 0;
   transition: translate 300ms ease-in-out;
+  border-radius: 4px;
 }
 
 .overlay {
@@ -352,6 +353,15 @@ header .switch-language-button {
   transform: scale(1.5);
 }
 
+.projects-section .carousel {
+  display: flex;
+  flex-direction: row;
+  width: 250px;
+  height: 230px;
+  overflow: hidden;
+  transition: .3s ease-in-out;
+}
+
 .project-card {
   border: 1px solid #b4b1b1;
   display: flex;
@@ -361,6 +371,7 @@ header .switch-language-button {
   height: 100%;
   flex-shrink: 0;
   flex-grow: 0;
+  padding: 1em;
   border-radius: 6px;
   transition: translate 300ms ease-in-out;
 }
@@ -386,12 +397,11 @@ header .switch-language-button {
 }
 
 .project-description {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100%;
   padding: 1em;
 }
 
@@ -405,6 +415,26 @@ header .switch-language-button {
 
 .project-link {
   margin-top: 2em;
+}
+
+@media (min-width: 950px) {
+  html {
+    font-size: 1.1rem;
+  }
+
+  .certificates-section .carousel {
+    width: 600px;
+    height: 350px;
+  }
+
+  .projects-section .carousel {
+    width: 600px;
+    height: 500px;
+  }
+
+  .project-description {
+    display: flex;
+  }
 }
 
 @media (min-width: 1350px) {
@@ -443,6 +473,10 @@ header .switch-language-button {
     height: 300px;
   }
 
+  .projects-section .carousel-container {
+    gap: 70px;
+  }
+
   .projects-section .carousel {
     width: 600px;
     height: 550px;
@@ -450,6 +484,7 @@ header .switch-language-button {
 
   .project-card {
     transition: translate 300ms ease-in-out;
+    justify-content: space-around;
   }
   
   .project-img-container {
@@ -457,8 +492,11 @@ header .switch-language-button {
     height: auto;
   }
 
-  .projects-section .carousel-container {
-    gap: 70px;
+  .project-description {
+    display: flex;
   }
 
+  .project-link {
+    margin-bottom: 1em;
+  }
 }
