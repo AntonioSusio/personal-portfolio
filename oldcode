@@ -371,6 +371,7 @@ header .switch-language-button {
   height: 100%;
   flex-shrink: 0;
   flex-grow: 0;
+  padding: 1em;
   border-radius: 6px;
   transition: translate 300ms ease-in-out;
 }
@@ -413,49 +414,25 @@ header .switch-language-button {
 }
 
 .project-link {
-  padding: 1em;
-}
-
-@media (min-width: 770px) {
-  html {
-    font-size: 1.1rem;
-  }
-  .certificates-section .carousel,
-  .projects-section .carousel {
-    width: 500px;
-    height: auto;
-  }
-
-  .project-description {
-    display: flex;
-  }
+  margin-top: 2em;
 }
 
 @media (min-width: 1350px) {
-  html {
-    font-size: 1.2rem;
-  }
-
   .main-content {
     display: grid;
     grid-template-areas:
         "about certificates certificates"
         "about certificates certificates"
-        "about projects projects";
+        "projects projects projects";
     gap: 20px;
   }
 
   .about-section {
     grid-area: about;
     width: 100%;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: start;
     gap: 30px;
-  }
-
-  .card-image-container {
-    width:  400px;
-    height: auto;
   }
 
   .certificates-section {
@@ -471,10 +448,18 @@ header .switch-language-button {
     display: flex;
   }
 
-  .certificates-section .carousel,
+  .certificates-section .carousel {
+    width: 450px;
+    height: 300px;
+  }
+
+  .projects-section .carousel-container {
+    gap: 70px;
+  }
+
   .projects-section .carousel {
     width: 600px;
-    height: auto;
+    height: 550px;
   }
 
   .project-card {
@@ -489,6 +474,7 @@ header .switch-language-button {
 
   .project-description {
     display: flex;
+    border: 1px solid red;
   }
 
   .project-link {
