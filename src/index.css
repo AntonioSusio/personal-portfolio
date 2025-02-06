@@ -408,8 +408,23 @@ header .switch-language-button {
   color: #ffffff;
 }
 
-.project-description p {
+.project-description-text,
+.project-link {
   margin: 0;
+}
+
+.project-technologies {
+  margin-bottom: 0;
+  color: #FF9233;
+}
+
+.technology {
+  border: 2px solid #7bd5ff;
+  border-radius: 10px;
+  color: #7bd5ff;
+  text-align: center;
+  margin-left: 1em;
+  padding: 0.125em 0.7em;
 }
 
 .project-link {
@@ -442,7 +457,7 @@ header .switch-language-button {
         "about certificates certificates"
         "about certificates certificates"
         "about projects projects";
-    gap: 20px;
+    gap: 40px;
   }
 
   .about-section {

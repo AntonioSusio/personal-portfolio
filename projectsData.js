@@ -8,7 +8,7 @@ export default [
         imagePath: "./src/assets/images/VanLifeApp.png",
         alternativeText: "image representing Vanlife project home screen",
         url: "https://van-life-antonio.netlify.app",
-        type: "Project during Scrimba formation"
+        technologies: ["React", "Javascript"]
     },
     
     {
@@ -19,7 +19,7 @@ export default [
         imagePath: "./src/assets/images/QuizzicalApp.png",
         alternativeText: "image representing Quizzical project home screen",
         url: "https://quizzical-app-antonio.netlify.app",
-        type: "Solo project"
+        technologies: ["React", "Javascript"]
     },
 
     {
@@ -30,7 +30,7 @@ export default [
         imagePath: "./src/assets/images/MovieWatchlistApp.png",
         alternativeText: "image representing Movie watchlist project home screen",
         url: "https://movie-watchlist-antonio.netlify.app",
-        type: "Solo project"
+        technologies: ["Javascript"]
     },
 
     {
@@ -42,7 +42,7 @@ export default [
         imagePath: "./src/assets/images/AssemblyEndgameApp.png",
         alternativeText: "image representing  Assembly Endgame project home screen",
         url: "https://assembly-endgame-antonio.netlify.app",
-        type: "Project during Scrimba formation"
+        technologies: ["React", "Javascript"]
     },
 
     {
@@ -53,7 +53,7 @@ export default [
         imagePath: "./src/assets/images/TenziesGameApp.png",
         alternativeText: "image representing Tenzies game project home screen",
         url: "https://tenzies-game-antonio.netlify.app",
-        type: "Project during Scrimba formation"
+        technologies: ["React", "Javascript"]
     },
 
     {
@@ -64,7 +64,7 @@ export default [
         imagePath: "./src/assets/images/MemeGeneratorApp.png",
         alternativeText: "image representing Meme generator project home screen",
         url: "https://meme-generator-antonio.netlify.app",
-        type: "Project during Scrimba formation"
+        technologies: ["React", "Javascript"]
     },
 
     {
@@ -75,6 +75,6 @@ export default [
         imagePath: "./src/assets/images/TravelJournalApp.png",
         alternativeText: "image representing Travel journal project home screen",
         url: "https://meme-generator-antonio.netlify.app",
-        type: "Project during Scrimba formation"
+        technologies: ["React", "Javascript"]
     },
 ]

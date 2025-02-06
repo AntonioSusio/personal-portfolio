@@ -8,5 +8,5 @@ export default {
                 "listening to music.",
     image: "AboutMeImg.webp",
     email: "antoniosusio@gmail.com",
-    skills: ["Html", "Css", "JavaScript", "React", "Figma"]
+    skills: ["Html", "Css", "Javascript", "React", "Figma"]
 }

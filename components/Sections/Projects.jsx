@@ -41,6 +41,9 @@ export default function Projects() {
                 </div>
                 <div className="project-description">
                     <p className="project-description-text">{project.description}</p>
+                    <p className="project-technologies">Technologies: {project.technologies.map(tech => 
+                        <span className="technology">{tech}</span>)}
+                    </p>
                 </div>
                 <a className="project-link" href={project.url} target="_blank">
                     <p className="project-link-text">Click here to visit project page</p>
