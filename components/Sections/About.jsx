@@ -1,8 +1,12 @@
 import React from "react"
 import data from "../../data";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
 
 export default function About() {
+    
+    const { t } = useTranslation();
+
     return (
         <section className="about-section">
                 <div className="card-container">
@@ -12,7 +16,7 @@ export default function About() {
 
                     <div className="contacts-container">
                         <h1 className="name">{data.fullName}</h1>
-                        <p className="contacts">Contacts</p>
+                        <p className="contacts">{t("CONTACTS")}</p>
                         <p className="email">{data.email}</p>
 
                         <div className="social-media-container">
@@ -35,12 +39,12 @@ export default function About() {
                 </div>
 
                 <section className="description-and-skill-section">
-                    <p className="description-section-header">About me</p>
+                    <p className="description-section-header">{t("ABOUT_ME")}</p> 
                     <div className="description-container">
-                        <p className="description-text">{data.description}</p>
+                        <p className="description-text">{t("MY_DESC")}</p>
                     </div>
                     <a className="scrimba-link" href="https://scrimba.com" target="_blank">
-                        <p className="scrimba-link-text">Click here if you want discover more about Scrimba</p>
+                        <p className="scrimba-link-text">{t("SCRIMBA_LINK")}</p>
                     </a>
 
                     <section className="skills-section">

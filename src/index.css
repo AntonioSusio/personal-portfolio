@@ -93,7 +93,8 @@ footer {
 .skills-section-header,
 .certificates-section-header,
 .projects-section-header,
-.project-technologies {
+.project-technologies,
+.project-name {
   color: var(--secondary-color);
 }
 
@@ -434,7 +435,7 @@ header {
 
 .projects-section .carousel {
   width: 250px;
-  height: 230px;
+  height: 250px;
 }
 
 .project-card {
@@ -446,6 +447,11 @@ header {
 .project-img {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
+}
+
+.project-name {
+  font-size: 1rem;
+  margin: 0.8em 0 0 0;
 }
 
 .project-description {

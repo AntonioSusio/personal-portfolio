@@ -2,22 +2,21 @@ import React from "react";
 import { useTranslation } from 'react-i18next';
 
 export default function Header () {
-    const [currentLanguage, setCurrentLanguage] = React.useState("EN");
-
     const { t, i18n } = useTranslation();
 
     function changeLanguage(lang) {
-        setCurrentLanguage(prevLang => prevLang === "EN" ? "IT" : "EN");
         i18n.changeLanguage(lang);  // Change language
     }
 
     return (
         <header>
-            <span className="header-title">{t("My portfolio")}</span>
+            <span className="header-title">{t("SITE_HEADER")}</span>
             <button 
                 className="switch-language-button"
-                onClick={currentLanguage === "EN" ? () => changeLanguage('it') : () => changeLanguage('en')}
-            >{currentLanguage}</button>
+                onClick={() => changeLanguage(i18n.language === "en" ? "it" : "en")}
+            >
+                {i18n.language.toUpperCase()}
+            </button>
         </header>
     )
 }

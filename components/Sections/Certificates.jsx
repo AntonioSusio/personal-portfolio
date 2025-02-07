@@ -1,12 +1,15 @@
 import React from "react";
 import certificatesData from "../../certificatesData";
 import Carousel from "../Carousel";
+import { useTranslation } from 'react-i18next';
 
 export default function Certificates() {
     const [certificates, setCertificates] = React.useState([]);
     const [slideIndex, setSlideIndex] = React.useState(0);
     const [isZoomed, setIsZoomed] = React.useState(false); // Overlay state
     const [imgSrc, setImgSrc] = React.useState(''); // Image zoom state
+
+    const { t } = useTranslation();
 
     React.useEffect(() => {
         function getCertificates() {
@@ -37,7 +40,7 @@ export default function Certificates() {
     
     return (
         <section className="certificates-section">
-            <h2 className="certificates-section-header">Certificates</h2>
+            <h2 className="certificates-section-header">{t("CERTIFICATES")}</h2>
             <Carousel 
                 data={certificateEl}
                 slideIndex={slideIndex}
