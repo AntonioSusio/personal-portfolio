@@ -1,0 +1,19 @@
+{
+    "SITE_HEADER": "My portfolio",
+    "CONTACTS": "Contacts",
+    "ABOUT_ME": "About me",
+    "MY_DESC":"I am a graduate frontend student from the Scrimba platform, with a particular interest in constantly improving and discovering new things about coding. I enjoy difficult challenges, even if it takes me time to solve them, because I like finding and analyzing new approaches that are unknown to me for solve them. I like collectible card games, strategy games, rope jumping, and I am a fan of cannelloni (a typical Neapolitan dish). But most importantly, I really love listening to music.",
+    "SCRIMBA_LINK": "Click here if you want discover more about Scrimba",
+    "CERTIFICATES": "Certificates",
+    "PROJECTS": "My Projects",
+    "TECHNOLOGIES": "Technologies",
+    "PROJECT_LINK": "Click here to visit project page",
+    "DESC_VANLIFE": "A website project based on the buying and selling of camper vans. React Routing method was used to navigate between pages and Authentication Required to access sections reserved only for logged-in users.",
+    "DESC_QUIZZICAL": "A simple quiz app project where you have to answer five general knowledge questions.",
+    "DESC_MOVIEWATCHLIST": "A Watchlist application project where you can create your own list of movies or TV shows to watch.",
+    "DESC_ASSEMBLYENDGAME": "This project is very similar to the game of Hangman. You have 8 lives. Each life is represented by a different programming technology. Try not to lose your favorite!",
+    "DESC_TENZIESGAME": "A project that represents a game where you have to win by finding the same number on all the dices. Will you be lucky quickly?",
+    "DESC_MEMEGENERATOR": "A simple project that generates random memes and allows you to write what you'd like to be shown on the image. Let your creativity flow! 😆",
+    "DESC_TRAVELJOURNAL": "A simple static project built with React depicting my travel journal with all the destinations I would like to visit."
+  }
+

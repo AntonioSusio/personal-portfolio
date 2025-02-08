@@ -1,0 +1,18 @@
+{
+    "SITE_HEADER": "Il mio portfolio",
+    "CONTACTS": "Contatti",
+    "ABOUT_ME": "Chi sono",
+    "MY_DESC" : "Sono uno studente laureato in frontend alla piattaforma Scrimba, con un particolare interesse nel migliorarmi costantemente e nel scoprire cose nuove riguardo alla programmazione. Mi piacciono le sfide difficili, anche se mi ci vuole tempo per risolverle, perché amo trovare e analizzare nuovi approcci che a me sono sconosciuti per risolverle. Mi piacciono i giochi di carte collezionabili, i giochi di strategia, salto con la corda, e sono un fan dei cannelloni (un piatto tipico napoletano). Ma soprattutto, adoro ascoltare musica.",
+    "SCRIMBA_LINK": "Clicca qui se vuoi saperne di più riguardo Scrimba",
+    "CERTIFICATES": "Certificati",
+    "TECHNOLOGIES": "Tecnologie",
+    "PROJECTS": "I miei Progetti",
+    "PROJECT_LINK": "Clicca qui per andare alla pagina del progetto",
+    "DESC_VANLIFE":"Un progetto di sito web basato sull'acquisto e sulla vendita di camper. È stato utilizzato il metodo React Routing per navigare tra le pagine e Authentication Required per accedere alle sezioni riservate solo agli utenti loggati.",
+    "DESC_QUIZZICAL": "Un semplice progetto di una Quiz App in cui bisogna rispondere a cinque domande di cultura generale.",
+    "DESC_MOVIEWATCHLIST": "Un progetto di App per una Watchlist, dove puoi creare la tua lista di film o serie TV da guardare.",
+    "DESC_ASSEMBLYENDGAME": "Questo progetto è molto simile al gioco dell'impiccato. Hai 8 vite. Ogni vita è rappresentata da una diversa tecnologia di programmazione. Cerca di non perdere la tua preferita!",
+    "DESC_TENZIESGAME": "Un progetto che rappresenta un gioco in cui devi vincere trovando lo stesso numero su tutti i dadi. Sarai fortunato velocemente?",
+    "DESC_MEMEGENERATOR": "Un semplice progetto che genera meme casuali e ti permette di scrivere ciò che desideri venga mostrato sull'immagine. Dai sfogo alla tua creatività! 😆",
+    "DESC_TRAVELJOURNAL": "Un semplice progetto statico costruito con React che rappresenta il mio diario di viaggio con tutte le destinazioni che vorrei visitare."
+  }

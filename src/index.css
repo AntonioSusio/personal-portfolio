@@ -1,68 +1,561 @@
+*,*::before, *::after {
+  box-sizing: border-box;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --text-color: #ffffff;
+  --secondary-color: #FF9233;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+html,
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  padding: 0;
+  background: linear-gradient(#343232 52%, #7c7474 100%) no-repeat;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Typography */
+.header-title,
+.email,
+.description-text {
+  font-size: 0.85rem;
+}
+
+.name,
+.contacts,
+.description-section-header,
+.skills-section-header,
+.certificates-section-header,
+.projects-section-header {
+  font-size: 1.25rem;
+}
+
+.description-section-header,
+.skills-section-header,
+.certificates-section-header,
+.projects-section-header {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.name {
+  margin: 0.875em 0 0 0;
+}
+
+.contacts {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.description-text {
+  line-height: 2;
+}
+
+.carousel-btn {
+  font-size: 1.5rem !important;
+}
+
+
+.footer-text {
+  font-size: 0.75rem;
+  padding: 0;
+}
+
+/* Layout */
+.site-wrapper {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+header,
+footer {
+  background-color: #171515;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+/* Shared properties */
+.email,
+.description-text,
+.linkedin-icon,
+.github-icon,
+.carousel-btn,
+.project-description-text {
+  color: var(--text-color) !important;
+}
+
+.header-title,
+.name,
+.contacts,
+.footer-text,
+.switch-language-button,
+.description-section-header,
+.scrimba-link,
+.project-link,
+.skills-section-header,
+.certificates-section-header,
+.projects-section-header,
+.project-technologies,
+.project-name {
+  color: var(--secondary-color);
+}
+
+.header-title,
+.email,
+.description-section-header,
+.footer-text,
+.scrimba-link-text,
+.project-link-text,
+.skills,
+.project-description-text,
+.project-link {
+  margin: 0;
+}
+
+header,
+footer,
+.main-content,
+.about-section,
+.card-container,
+.contacts-container,
+.social-media-container,
+.description-and-skill-section,
+.skills-section,
+.certificates-section, 
+.projects-section,
+.carousel-container,
+.certificates-section .carousel,
+.overlay,
+.projects-section .carousel,
+.project-card {
+  display: flex;
+}
+
+.main-content,
+.about-section,
+.card-container,
+.contacts-container,
+.description-and-skill-section,
+.skills-section,
+.certificates-section, 
+.projects-section,
+.project-card,
+.project-description {
+  flex-direction: column;
+}
+
+.carousel-container,
+.certificates-section .carousel,
+.projects-section .carousel {
+  flex-direction: row;
+}
+
+footer,
+.main-content,
+.about-section,
+.description-and-skill-section,
+.certificates-section, 
+.projects-section,
+.carousel-container,
+.overlay,
+.project-description {
+  justify-content: center;
+}
+
+header,
+footer,
+.main-content,
+.about-section,
+.card-container,
+.contacts-container,
+.description-and-skill-section,
+.skills-section,
+.certificates-section, 
+.projects-section,
+.carousel-container,
+.overlay,
+.project-card,
+.project-description {
+  align-items: center;
+}
+
+.description-container,
+.scrimba-link,
+.project-link,
+.skills,
+.project-description,
+.technology {
+  text-align: center;
+}
+
+header,
+footer,
+.description-text,
+.project-link {
+  padding: 1em;
+}
+
+header,
+footer {
+  width: 100%;
+}
+
+.card-image-container img,
+.certificate-img,
+.overlay,
+.project-card,
+.project-img-container,
+.project-img {
+  width: 100%;
+  height: 100%;
+}
+
+.linkedin-icon,
+.github-icon {
+  width: 35px;
+  height: 35px;
+  transition: .5s;
+}
+
+.linkedin-icon:hover,
+.github-icon:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 0.4rem var(--text-color))
+}
+
+.switch-language-button,
+.scrimba-link,
+.project-link,
+.certificates-section .carousel:hover,
+.project-img-container {
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.switch-language-button,
+.card-image-container img,
+.description-container,
+.skills,
+.technology {
+  border-radius: 10px;
+}
+
+.card-image-container img,
+.certificate-img,
+.project-img {
+  object-fit: cover;
+}
+
+.card-image-container img,
+.certificate-img,
+.carousel-btn {
+  display: block;
+}
+
+.scrimba-link,
+.project-link {
+  transition: .3s;
+}
+
+.scrimba-link:hover,
+.project-link:hover {
+  text-shadow: 1px 1px 5px var(--secondary-color);
+  transform: scale(1.07);
+}
+
+.certificates-section .carousel:hover,
+.project-img-container:hover {
+  transform: scale(0.95);
+}
+
+.certificates-section .carousel,
+.carousel-btn,
+.projects-section .carousel,
+.project-img-container {
+  transition: .3s ease-in-out !important;
+}
+
+.certificates-section .carousel,
+.projects-section .carousel {
+  overflow: hidden;
+}
+
+.certificate-img,
+.project-card {
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.certificates-section-header,
+.projects-section-header {
+  margin: 0 0 0.25em;
+}
+
+.skills,
+.technology {
+  border: 2px solid #7bd5ff;
+  color: #7bd5ff;
+  padding: 0.125em 0.7em;
+}
+
+.certificates-section .carousel:hover,
+.carousel-btn:hover,
+.project-img-container:hover {
+  filter: drop-shadow(1px 1px 5px var(--text-color));
+}
+
+footer,
+.overlay {
+  top: 0;
+  left: 0;
+}
+
+/* Own property */
+header {
+  justify-content: space-between;
+}
+
+.switch-language-button {
+  font-family: 'Poppins', sans-serif;
+  margin: auto 0;
+  padding: 0.5em 1em;
+  border: 1px solid var(--secondary-color);
+  background: none;
+  transition: .5s;
+}
+
+.switch-language-button:hover {
+  background-color: var(--secondary-color);
+  color: #171515;
+}
+
+.main-content {
+  min-height: calc(100vh - 60px);
+  padding: 2em;
+  gap: 4em;
+}
+
+.card-image-container {
+  width:  197px;
+  height: 280px;
+}
+
+.card-image-container img {
+  filter: drop-shadow(0 0 0.3rem var(--text-color));
+}
+
+.social-media-container {
+  gap: 1.5em;
+  margin: 0.938em 0;
+}
+
+.linkedin-icon {
+  background-color: #0077B5;
+  padding: 0.25em;
+  border-radius: 5px;
+}
+
+.description-container {
+  border: 1px solid #b4b1b1;
+  background: none;
+}
+
+.skills-section {
+  margin-top: 2em;
+}
+
+.skills-section-header {
+  margin: 0 0 0.25em;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-areas:
+        "Html Html . Css Css"
+        ". Javascript Javascript Javascript ."
+        "React React React Figma Figma";
+  grid-gap: 8px;
+}
+
+.Html {
+  grid-area: Html;
+}
+
+.Css {
+  grid-area: Css;
+}
+
+.Javascript {
+  grid-area: Javascript;
+}
+
+.React {
+  grid-area: React;
+}
+
+.Figma {
+  grid-area: Figma;
+}
+
+.skills {
+  padding: 0.125em 0.7em;
+}
+
+.carousel-container {
+  gap: 15px;
+}
+
+.certificates-section .carousel {
+  width: 250px;
+  height: 127px;
+}
+
+.certificate-img {
+  transition: translate 300ms ease-in-out;
+  border-radius: 4px;
+}
+
+.overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.img-zoom {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  cursor: zoom-out;
+}
+
+.carousel-btn {
+  all: unset;
+}
+
+.carousel-btn:hover {
+  transform: scale(1.5);
+}
+
+.projects-section .carousel {
+  width: 250px;
+  height: 250px;
+}
+
+.project-card {
+  border: 1px solid #b4b1b1;
+  border-radius: 6px;
+  transition: translate 300ms ease-in-out;
+}
+
+.project-img {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.project-name {
+  font-size: 1rem;
+  margin: 0.8em 0 0 0;
+}
+
+.project-description {
+  display: none;
+}
+
+.project-technologies {
+  margin-bottom: 0;
+}
+
+.technologies-container {
+  display: none;
+}
+
+.technology {
+  margin-left: 0.8em;
+}
+
+@media (min-width: 770px) {
+  /* Shared property */
+  .project-description,
+  .technologies-container {
+    display: flex;
   }
-  a:hover {
-    color: #747bff;
+
+  .certificates-section .carousel,
+  .projects-section .carousel {
+    width: 500px;
+    height: auto;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .project-card {
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+  }
+  
+  .project-description {
+    padding: 1em 1em 0;
+  }
+  
+  /* Own property */
+  html {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1350px) {
+  /* Shared property */
+  .skills-container,
+  .project-description {
+    display: flex;
+  }
+
+  html {
+    font-size: 1.2rem;
+  }
+
+  .main-content {
+    display: grid;
+    grid-template-areas:
+        "about certificates certificates"
+        "about certificates certificates"
+        "about projects projects";
+    gap: 40px;
+  }
+
+  .about-section {
+    grid-area: about;
+    width: 100%;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .card-image-container {
+    width:  400px;
+    height: auto;
+  }
+
+  .certificates-section {
+    grid-area: certificates;
+    align-self: flex-start;
+  }
+
+  .projects-section {
+    grid-area: projects;
+  }
+
+  .certificates-section .carousel,
+  .projects-section .carousel {
+    width: 600px;
+    height: auto;
+  }
+
+  .project-card {
+    transition: translate 300ms ease-in-out;
+  }
+  
+  .project-img-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-link {
+    margin-bottom: 1em;
   }
 }
