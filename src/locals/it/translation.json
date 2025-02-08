@@ -14,5 +14,6 @@
     "DESC_ASSEMBLYENDGAME": "Questo progetto è molto simile al gioco dell'impiccato. Hai 8 vite. Ogni vita è rappresentata da una diversa tecnologia di programmazione. Cerca di non perdere la tua preferita!",
     "DESC_TENZIESGAME": "Un progetto che rappresenta un gioco in cui devi vincere trovando lo stesso numero su tutti i dadi. Sarai fortunato velocemente?",
     "DESC_MEMEGENERATOR": "Un semplice progetto che genera meme casuali e ti permette di scrivere ciò che desideri venga mostrato sull'immagine. Dai sfogo alla tua creatività! 😆",
-    "DESC_TRAVELJOURNAL": "Un semplice progetto statico costruito con React che rappresenta il mio diario di viaggio con tutte le destinazioni che vorrei visitare."
+    "DESC_TRAVELJOURNAL": "Un semplice progetto statico costruito con React che rappresenta il mio diario di viaggio con tutte le destinazioni che vorrei visitare.",
+    "FOOTER": "Antonio Susio © 2025 tutti i diritti riservati"
   }

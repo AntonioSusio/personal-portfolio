@@ -4,7 +4,6 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 
 export default function About() {
-    
     const { t } = useTranslation();
 
     return (
