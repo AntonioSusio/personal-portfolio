@@ -65,7 +65,7 @@ export default [
         description_tag: "DESC_TRAVELJOURNAL",
         imagePath: "/TravelJournalApp.png",
         alternativeText: "image representing Travel journal project home screen",
-        url: "https://meme-generator-antonio.netlify.app",
+        url: "https://travel-journal-antonio.netlify.app",
         technologies: ["React", "Javascript"]
     },
 ]
