@@ -14,6 +14,7 @@
     "DESC_ASSEMBLYENDGAME": "This project is very similar to the game of Hangman. You have 8 lives. Each life is represented by a different programming technology. Try not to lose your favorite!",
     "DESC_TENZIESGAME": "A project that represents a game where you have to win by finding the same number on all the dices. Will you be lucky quickly?",
     "DESC_MEMEGENERATOR": "A simple project that generates random memes and allows you to write what you'd like to be shown on the image. Let your creativity flow! 😆",
-    "DESC_TRAVELJOURNAL": "A simple static project built with React depicting my travel journal with all the destinations I would like to visit."
+    "DESC_TRAVELJOURNAL": "A simple static project built with React depicting my travel journal with all the destinations I would like to visit.",
+    "FOOTER": "Antonio Susio © 2025 all rights reserved"
   }
 
