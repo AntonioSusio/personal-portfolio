@@ -1,31 +1,31 @@
 export default [
     {
         id: 1,
-        imageUrl: "./src/assets/images/FrontEndCertificate.png",
+        imageUrl: "/FrontEndCertificate.png",
         alternativeText: "Image representing Frontend career path certificate"
     },
 
     {
         id: 2,
-        imageUrl: "./src/assets/images/Html&CssCertificate.png",
+        imageUrl: "/Html&CssCertificate.png",
         alternativeText: "Image representing Html and css certificate"
     },
 
     {
         id: 3,
-        imageUrl: "./src/assets/images/JavascriptCertificate.png",
+        imageUrl: "/JavascriptCertificate.png",
         alternativeText: "Image representing Javascript certificate"
     },
 
     {
         id: 4,
-        imageUrl: "./src/assets/images/ReactCertificate.png",
+        imageUrl: "/ReactCertificate.png",
         alternativeText: "Image representing React certificate"
     },
 
     {
         id: 5,
-        imageUrl: "./src/assets/images/FromFigmaToCodeCertificate.png",
+        imageUrl: "/FromFigmaToCodeCertificate.png",
         alternativeText: "Image representing From figma to code certificate"
     }
 ]
