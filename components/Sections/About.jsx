@@ -2,6 +2,7 @@ import React from "react"
 import data from "../../data";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
+import AboutMeImg from "../src/assets/images/AboutMeImg.webp"
 
 export default function About() {
     const { t } = useTranslation();
@@ -10,7 +11,9 @@ export default function About() {
         <section className="about-section">
                 <div className="card-container">
                     <div className="card-image-container">
+
                         <img src={data.imagePath} alt="An image representing Antonio watching in the camera smiling" />
+
                     </div>
 
                     <div className="contacts-container">
